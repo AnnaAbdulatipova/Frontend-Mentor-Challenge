@@ -5,92 +5,130 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
+<!-- Fonts -->  
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="./styles/style.css">
+
   <title>Frontend Mentor | E-commerce product page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
-</head>
+<!-- header, top part -->
 <body>
-  <div class = "container">
+  <div class="container">
+
     <header>
-      <h1>Sneakers</h1>
-      <nav>
-      <ul>
-        <li><a href="#">Collections</a></li> <!-- <li>-List Item, a= anchor(clickable link), href= where link will take u,  -->
-        <li><a href="#">Men</a></li>
-        <li><a href="#">Women</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+      <div class="hamburger-logo-group">
+        <div class="hamburger">
+         <div class="line"></div>
+         <div class="line"></div>
+         <div class="line"></div>
+        </div>
+
+      <img src="./images/logo.svg" alt="logo icon">
+
+      <nav class="menu hidden">
+
+        <div class="slide-menu">
+          <img id="btnMenuClose" src="./images/icon-close.svg" alt="icon close">
+        </div>
+
+        <ul>
+          <li><a href="#">Collections</a></li>
+          <li><a href="#">Men</a></li>
+          <li><a href="#">Women</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+
       </nav>
-      <div Class="cart-user">
-        <img src="images/icon-cart.svg" alt="Cart">
-        <img src="images/image-avatar.svg" alt="User" class="Profile-Pic">
+        
       </div>
+
+      <div class="cart-avatar-group">
+        <div class="btnCart">
+          <img src="/images/icon-cart.svg" alt="cart icon">
+          <div class="cart-count">3</div>
+        </div>
+
+        <img class="avatar" src="/images/image-avatar.png" alt="image avatar">
+
+        <div class="cart hidden">
+        <div class="cart-header">Cart</div>
+        <div class="products-in-cart"></div>
+        
+        <div class="item">
+          <img class="product-img" src="/images/image-product-1-thumbnail.jpg" alt="product 1 thumb">
+          <div class="details">
+            <div class="product-ame">Autumn Limited Edition...</div>
+            <div class="price-group">
+              <div class="price">$125.00</div>
+              <div class="count">3</div>
+              <div class="total-amount">$375.00</div>
+            </div>
+          </div>
+          <img id="btnDelete" src="/images/icon-delete.svg" alt="icon delete">
+        </div>
+        <div class="msg-empty hidden">Your cart is empty.</div>
+        <div class="checkout">Checkout</div>
+        </div>
+
+
+      </div>
+
     </header>
 
-    <main>
-      <section class="product-gallery">
-        <img src="images/image-product-1.jpg" alt="Product" class="main-image">
+    <div class="content">
+
+      <!-- LIghtbox -->
+      <section class="lightbox">
+        <img class="product hero "src="./images/image-product-1.jpg" alt="image product">
+        <div class="previous arrow">
+          <img src="/images/icon-previous.svg" alt ="icon previous">
+        </div>
+        <div class="next arrow">
+          <img src="/images/icon-next.svg" alt="icon next">
+        </div>
       </section>
 
-      <section class="product-details">
-        <h2>Sneaker Company</h2>
-        <h1>Fall Limited Edition Sneakers</h1>
-        <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll whithstand everything the weather can offer.</p>
+      <!--Product -->
 
-        <div class="peice">
-          <span class="current-price">$125.00</span>
-          <span class="discount">50%</span>
-          <span class="original-price">$250.00</span>
+      <section class="product">
+        <div class="company-name">sneaker company</div>
+        <div class="title">Fall Limited Edition Sneakers</div>
+        <div class="description">
+          These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the wearer can offer.
         </div>
 
-        <div class="cart">
-          <div class="quantity">
-            <button id="minus">-</button>  <!-- when clicked will decrease the quantity number  -->
-            <span id="quantity">0</span> <!-- the value that will b updating -->
-            <button id="plus">+</button>  <!-- increases the quantity number  -->
+        <div class="price-wrapper">
+          <div class="group">
+            <div class="price">$125.00</div>
+            <div class="discount">50%</div>
           </div>
-          <button class="add-to-cart">
-            <img src="images/icon-cart.svg" alt="">
-            Add To Cart
-          </button>
+          <div class="old-price">$250.00</div>
+        </div>
+
+        <div class="count-btn-group">
+          <div class="counter-wrapper">
+            <img id="btnMinus" src="/images/icon-minus.svg" alt="icon minus">
+            <div class="counter">1</div>
+            <img id="btnPlus" src="/images/icon-plus.svg" alt="icon plus">
+          </div>
+
+          <!-- cart -->
+          <div class="btn">
+            <img src="/images/icon-cart.svg" alt="icon cart">
+            <p>Add to cart</p>
+          </div>
         </div>
       </section>
-    </main>
-
-    <script src="script.js"></script>
-
-
-  </div>
-
-  Collections
-  Men
-  Women
-  About
-  Contact
-
-  Sneaker Company
-
-  Fall Limited Edition Sneakers
-
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
-
-  $125.00
-  50%
-  $250.00
-
-  0
-  Add to cart
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    </div>
   </div>
 </body>
-</html>
